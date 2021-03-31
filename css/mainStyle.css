@@ -90,7 +90,7 @@ nav button.navbar-icons:focus{
   }
 }
 @media(max-width:993px){
-  .navbar .container-fluid .login-lg-hide{
+  .navbar .container-fluid .login-md-hide{
     display: none;
   }
 }
@@ -1349,7 +1349,7 @@ line-height: 2em;
 .page-findTraining .section-findTraining .training-filter  form label{
   padding: 12px 0px 6px 0;
 }
-.page-findTraining .section-findTraining  .col-lg-3 ,.page-findTraining .section-findTraining  .col-lg-9{
+.page-findTraining .section-findTraining  .col-md-3 ,.page-findTraining .section-findTraining  .col-md-9{
   padding:10px 8px;
 }
 .page-findTraining .section-findTraining  .training-new .training{
@@ -2275,7 +2275,7 @@ background-color: #eee;
 .page-desc-request .container  .r-d{
   padding-right: 5px !important;
 }
-.page-desc-request .container  .col-lg-3{
+.page-desc-request .container  .col-md-3{
   padding-right: 0 !important;
 }
 .page-desc-request .container .right-descRequest .speech-students {
