@@ -163,12 +163,11 @@ nav button.navbar-icons:focus{
 /*section header*/
 .section-header {
   width: 100%;
-  height: 100vh;
   position: relative;
 }
 .section-header .carousel-inner .carousel-item1 {
   background-image: url(../image/header/grad/15.jfif);
-  height: 100vh;
+  height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -176,7 +175,7 @@ nav button.navbar-icons:focus{
 }
 .section-header .carousel-inner .carousel-item2 {
   background-image: url(../image/header/grad/17.jfif);
-  height: 100vh;
+  height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
