@@ -4,13 +4,13 @@ $(document).ready(function () {
   if ($("title").text() !== "index") {
     let hightNavbar = $(".navbar").innerHeight();
     $(".navbar").next().css({
-        paddingTop: hightNavbar + "px",
-      });
+      paddingTop: hightNavbar + "px",
+    });
     $(window).resize(function () {
       let hightNavbar = $(".navbar").innerHeight();
       $(".navbar").next().css({
-          paddingTop: hightNavbar + "px",
-        });
+        paddingTop: hightNavbar + "px",
+      });
     });
   }
 
@@ -31,15 +31,15 @@ $(document).ready(function () {
       }
     });
   }
-  /*footer section */
-  if ($("title").text() == "index") {
-    $(".overly-image-footer ,.overly-footer ").css({
-      height: "70%",
-    });
-    $(".section-footer").css({
-      marginTop: "150px",
-    });
-  }
+  // /*footer section */
+  // if ($("title").text() == "index") {
+  //   $(".overly-image-footer ,.overly-footer ").css({
+  //     height: "70%",
+  //   });
+  //   $(".section-footer").css({
+  //     marginTop: "150px",
+  //   });
+  // }
 
   /*section slider majors page*/
   $(".container-slider-majors").slick({
@@ -121,10 +121,10 @@ $(document).ready(function () {
   if ($("title").text() !== "index") {
     let navbarHeight = $(".navbar").innerHeight();
     $(".navbar")
-      .next()
-      .css({
-        paddingTop: navbarHeight + "px",
-      });
+        .next()
+        .css({
+          paddingTop: navbarHeight + "px",
+        });
   }
 
   /**************** majors ******/
@@ -166,7 +166,7 @@ $(document).ready(function () {
 
     $(".description-info" + " ." + data_info_profile).fadeIn( 50,function () {
       $(".description-info" + " ." + data_info_profile)
-        .siblings().fadeOut(50);
+          .siblings().fadeOut(50);
     });
   });
 //all training
@@ -181,7 +181,7 @@ $(document).ready(function () {
       $(this).find("i").addClass("fa fa-minus");
     }
   });
-  
+
   $(".page-profile-company .my-training .header-my-training .form-check").change(function () {
     if ($(this).find("input:checked").hasClass("showAll-training")) {
       $(".page-profile-company .all-training .my-training .training .all-training-profile").slideDown(400);
@@ -197,9 +197,9 @@ $(document).ready(function () {
       $(".page-profile-company .training .description-training .title-desc-training h6 i").removeClass("fa fa-chevron-down");
       $(".page-profile-company .training .description-training .title-desc-training h6 i").addClass("fa fa-minus");
     }
-  
+
   });
-  
+
   //select option edit-delete-show training
   $(".page-profile-company .description-info .all-training  .title-options .show-options").on("click" , function(){
     $(this).next("ul").slideToggle(200);
@@ -218,7 +218,7 @@ $(document).ready(function () {
       $(this).find("i").addClass("fa fa-minus");
     }
   });
-  
+
   $(".page-profile-company .all-request-post .header-request .form-check").change(function () {
     if ($(this).find("input:checked").hasClass("showAll-requests")) {
       $(".page-profile-company .all-request-post .all-request .requests-students").slideDown(400);
@@ -234,7 +234,7 @@ $(document).ready(function () {
       $(".page-profile-company .all-request-post .all-request .request-training .title-training-request h6 i").removeClass("fa fa-chevron-down");
       $(".page-profile-company .all-request-post .all-request .request-training .title-training-request h6 i").addClass("fa fa-minus");
     }
-  
+
   });
 
   /****** page description training********/
@@ -242,5 +242,44 @@ $(document).ready(function () {
     console.log("ss");
     $(".right-post .send-request").slideDown(200);
   });
+
+
+  /****** page show Training********/
+  $('.page-findTraining .title-filter').on('click' , function(){
+    $(this).next().slideToggle(300);
+    if($(this).find("i").hasClass('icon-show-filter')){
+      $(this).find('i').toggleClass('icon-show-filter');
+      $(this).find('i').toggleClass('fa-chevron-down');
+      $(this).find('i').toggleClass('fa-chevron-up');
+
+    }else{
+      $(this).find('i').toggleClass('icon-show-filter');
+      $(this).find('i').toggleClass('fa-chevron-down');
+      $(this).find('i').toggleClass('fa-chevron-up');
+    }
+
+  });
+
+  $('.section-filter .toggle-show-more-filter').on('click' , function(){
+    if($(this).find('div').hasClass("check-toggle")){
+      $(this).find('div').toggleClass('check-toggle');
+      $('.section-filter .filter-mask').toggleClass('mask');
+    }else{
+
+    }
+
+  })
+
+  $('.btn-login-student').on('click' , function(){
+    console.log('student');
+    $('.login-company').hide();
+    $('.login-student').show();
+  });
+  $('.btn-login-company').on('click' , function(){
+    console.log('company');
+    $('.login-company').show();
+    $('.login-student').hide();
+  });
+
 });
 
